@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:wtravel_app/screens/dashboard_screen.dart';
 import 'package:wtravel_app/screens/home_screen.dart';
-import 'package:wtravel_app/screens/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'WTravel',
       theme: ThemeData(),
-      home: const SplashScreen(),
+      home: const DashboardScreen(),
     );
   }
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/screens/dashboard_screen.dart';
 
-enum MenuState { home, message, profile }
+enum MenuState { beranda, perjalanan, panduan, profile }
 
 class ButtonNavBar extends StatelessWidget {
   const ButtonNavBar({
@@ -14,7 +14,7 @@ class ButtonNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const Color inActiveIconColor = Color(0xFFB6B6B6);
+    const Color inActiveIconColor = Color(0xFF617986);
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 14),
       decoration: BoxDecoration(
@@ -31,47 +31,57 @@ class ButtonNavBar extends StatelessWidget {
           topRight: Radius.circular(40),
         ),
       ),
-      child: SafeArea(
-        top: false,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-              icon: Icon(
-                Icons.home_filled,
-                color: MenuState.home == selectedMenu
-                    ? primaryColor
-                    : inActiveIconColor,
-              ),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => DashboardScreen()),
-              ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          IconButton(
+            icon: Icon(
+              Icons.home_filled,
+              color: MenuState.beranda == selectedMenu
+                  ? bgLightColor
+                  : inActiveIconColor,
             ),
-            IconButton(
-              icon: Icon(Icons.backpack),
-              onPressed: () {},
+            onPressed: () {
+              if (selectedMenu != MenuState.beranda) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const DashboardScreen(),
+                  ),
+                );
+              }
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.backpack),
+            color: MenuState.perjalanan == selectedMenu
+                ? bgLightColor
+                : inActiveIconColor,
+            onPressed: () {
+              // Tambahkan logika untuk menu perjalanan
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.menu_book),
+            color: MenuState.panduan == selectedMenu
+                ? bgLightColor
+                : inActiveIconColor,
+            onPressed: () {
+              // Tambahkan logika untuk menu panduan
+            },
+          ),
+          IconButton(
+            icon: Icon(
+              Icons.account_circle,
+              color: MenuState.profile == selectedMenu
+                  ? bgLightColor
+                  : inActiveIconColor,
             ),
-            IconButton(
-              icon: Icon(Icons.menu_book),
-              onPressed: () {},
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.account_circle,
-                color: MenuState.profile == selectedMenu
-                    ? primaryColor
-                    : inActiveIconColor,
-              ),
-              onPressed: () {
-                // Navigator.push(
-                //   context,
-                //   MaterialPageRoute(
-                //       builder: (context) => ProfileScreen()))
-              },
-            ),
-          ],
-        ),
+            onPressed: () {
+              // Tambahkan logika untuk menu profile
+            },
+          ),
+        ],
       ),
     );
   }
