@@ -6,6 +6,7 @@ class TourismPlace {
   String openTime;
   String ticketPrice;
   String imageAsset;
+  String rating;
   List<String> imageUrls;
 
   TourismPlace({
@@ -15,6 +16,7 @@ class TourismPlace {
     required this.openDays,
     required this.openTime,
     required this.ticketPrice,
+    required this.rating,
     required this.imageAsset,
     required this.imageUrls,
   });
@@ -23,12 +25,13 @@ class TourismPlace {
 var tourismPlaceList = [
   TourismPlace(
     name: 'Pulau Komodo',
-    location: 'Nusa Tenggara Timur',
+    location: 'NTT',
     description:
         'Pulau Komodo menjadi rumah bagi Komodo, kadal terbesar di Bumi. Pulau ini juga dikenal dengan pemandangan indahnya, terumbu karang, dan pantai berpasir merah. Keindahan alamnya menarik wisatawan untuk menjelajahi keanekaragaman hayati dan keunikan pulau ini.',
-    openDays: 'Buka Setiap Hari',
+    openDays: 'Buka',
     openTime: '24 Jam',
-    ticketPrice: 'Bervariasi',
+    ticketPrice: '300.000',
+    rating: '4.8',
     imageAsset: 'assets/images/komodoisland.jpg',
     imageUrls: [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2a/37/06/e4/caption.jpg?w=1200&h=-1&s=1',
@@ -41,9 +44,10 @@ var tourismPlaceList = [
     location: 'Bali',
     description:
         'Nusa Penida adalah pulau kecil di sebelah tenggara Bali yang terkenal dengan pantai-pantainya yang eksotis, terumbu karang, dan pemandangan alam yang menakjubkan. Jelajahi keindahan tebing tebingnya, air terjun yang tersembunyi, dan nuansa keasrian alam yang sulit ditandingi.',
-    openDays: 'Buka Setiap Hari',
+    openDays: 'Buka',
     openTime: '24 Jam',
-    ticketPrice: 'Bervariasi',
+    ticketPrice: '300.000',
+    rating: '4.9',
     imageAsset: 'assets/images/nusapenida.jpg',
     imageUrls: [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/45/64/8b/photo0jpg.jpg?w=1200&h=-1&s=1',
@@ -56,9 +60,10 @@ var tourismPlaceList = [
     location: 'Jawa Timur',
     description:
         'Gunung Bromo adalah salah satu gunung berapi yang paling terkenal di Indonesia, terkenal dengan kawahnya yang spektakuler dan lanskap pegunungan yang menakjubkan. Rasakan petualangan mendaki ke puncak dan nikmati pemandangan matahari terbit yang memukau.',
-    openDays: 'Buka Setiap Hari',
+    openDays: 'Buka',
     openTime: '24 Jam',
-    ticketPrice: 'Bervariasi',
+    ticketPrice: '300.000',
+    rating: '4.7',
     imageAsset: 'assets/images/bromo.jpg',
     imageUrls: [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/a5/28/9e/photo0jpg.jpg?w=1200&h=-1&s=1',
@@ -71,9 +76,10 @@ var tourismPlaceList = [
     location: 'Jawa Barat',
     description:
         'Gunung Gede adalah salah satu gunung tertinggi di Jawa Barat. Lokasi ini populer di kalangan pendaki gunung dan menawarkan pemandangan alam yang menakjubkan. Rintislah pendakian Anda dan rasakan kepuasan mencapai puncak yang memukau.',
-    openDays: 'Buka Setiap Hari',
+    openDays: 'Buka',
     openTime: '24 Jam',
-    ticketPrice: 'Bervariasi',
+    ticketPrice: '300.000',
+    rating: '5.0',
     imageAsset: 'assets/images/gunung-gede.jpg',
     imageUrls: [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/5e/31/a4/gede-ctarer.jpg?w=1200&h=-1&s=1',
@@ -86,9 +92,10 @@ var tourismPlaceList = [
     location: 'Jawa Barat',
     description:
         'Taman Nasional Cibodas adalah salah satu taman nasional di Indonesia. Terletak di Jawa Barat, taman ini terkenal dengan keindahan alamnya, termasuk flora dan fauna yang unik. Jelajahi keasrian alam dan nikmati keindahan taman yang memikat hati.',
-    openDays: 'Buka Setiap Hari',
+    openDays: 'Buka',
     openTime: '24 Jam',
-    ticketPrice: 'Bervariasi',
+    ticketPrice: '300.000',
+    rating: '4.5',
     imageAsset: 'assets/images/kebun-raya-cibodas.jpg',
     imageUrls: [
       'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/9a/12/26/water-pond.jpg?w=1200&h=-1&s=1',

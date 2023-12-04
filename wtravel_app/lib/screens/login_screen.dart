@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtravel_app/screens/dashboard_screen.dart';
 import 'package:wtravel_app/size_config.dart';
 import 'package:wtravel_app/widgets/default_button.dart';
 import 'package:wtravel_app/widgets/social_media_card.dart';
@@ -37,14 +38,12 @@ class LoginForm extends StatelessWidget {
         ),
         SizedBox(height: getProportionateScreenHeight(20)),
         TextFormField(
-          // Implementasi field email atau username
           decoration: const InputDecoration(
             labelText: 'Email or Username',
           ),
         ),
         SizedBox(height: getProportionateScreenHeight(20)),
         TextFormField(
-          // Implementasi field password
           obscureText: true,
           decoration: const InputDecoration(
             labelText: 'Password',
@@ -54,20 +53,23 @@ class LoginForm extends StatelessWidget {
         DefaultButton(
           text: "Login",
           press: () {
-            // Implementasi logika login di sini
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const DashboardScreen()),
+            );
           },
         ),
         SizedBox(height: SizeConfig.screenHeight * 0.08),
-        Row(
+        const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SocialMediaCard(
               icon: "assets/icons/google.svg",
-              press: () {},
+              socialMediaName: "Google",
             ),
             SocialMediaCard(
               icon: "assets/icons/facebook.svg",
-              press: () {},
+              socialMediaName: "Facebook",
             ),
           ],
         ),

@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: <Widget>[
                   const Text(
-                    "Wisata App",
+                    "WTravel",
                     style: TextStyle(
                       fontSize: 36,
                       color: primaryColor,
@@ -51,7 +51,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return const LoginScreen();
+                          return const RegisterScreen();
                         }),
                       );
                     },
@@ -62,7 +62,7 @@ class HomeScreen extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(builder: (context) {
-                          return const RegisterScreen();
+                          return const LoginScreen();
                         }),
                       );
                     },
