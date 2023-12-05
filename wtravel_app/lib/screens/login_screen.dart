@@ -11,6 +11,9 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Login"),
+      ),
       body: SafeArea(
         child: Padding(
           padding:
@@ -31,13 +34,6 @@ class LoginForm extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            "Login",
-            style: TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
           SizedBox(height: getProportionateScreenHeight(100)),
           TextFormField(
             decoration: const InputDecoration(
@@ -69,10 +65,12 @@ class LoginForm extends StatelessWidget {
           DefaultButton(
             text: "Masuk",
             press: () {
-              Navigator.pushReplacement(
+              Navigator.pushAndRemoveUntil(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const DashboardScreen()),
+                  builder: (context) => const DashboardScreen(),
+                ),
+                (route) => false,
               );
             },
           ),
@@ -120,7 +118,6 @@ class LoginForm extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: SizeConfig.screenHeight * 0.08),
         ],
       ),
     );
