@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/screens/dashboard_screen.dart';
 import 'package:wtravel_app/screens/panduan_screen.dart';
+import 'package:wtravel_app/screens/perjalanan_koleksi_screen.dart';
 import 'package:wtravel_app/screens/profile_screen.dart';
 
 enum MenuState { beranda, perjalanan, panduan, profile }
@@ -60,7 +61,14 @@ class ButtonNavBar extends StatelessWidget {
                 ? bgLightColor
                 : inActiveIconColor,
             onPressed: () {
-              // Tambahkan logika untuk menu perjalanan
+              if (selectedMenu != MenuState.perjalanan) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const PerjalananKoleksi(),
+                  ),
+                );
+              }
             },
           ),
           IconButton(

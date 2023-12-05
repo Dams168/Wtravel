@@ -5,7 +5,7 @@ import 'package:wtravel_app/widgets/article_card.dart';
 import 'package:wtravel_app/widgets/button_navbar.dart';
 
 class PanduanScreen extends StatelessWidget {
-  const PanduanScreen({Key? key});
+  const PanduanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
