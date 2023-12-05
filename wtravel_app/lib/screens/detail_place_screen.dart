@@ -4,8 +4,6 @@ import 'package:wtravel_app/models/tourism_place.dart';
 import 'package:wtravel_app/size_config.dart';
 import 'package:wtravel_app/widgets/review_card.dart';
 
-var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
-
 class DetailPlaceScreen extends StatelessWidget {
   final TourismPlace place;
 
@@ -72,7 +70,6 @@ class DetailPlacePage extends StatelessWidget {
                           textAlign: TextAlign.left,
                           style: const TextStyle(
                             fontSize: 30.0,
-                            fontFamily: 'Staatliches',
                             fontWeight: FontWeight.w900,
                           ),
                         ),
@@ -93,7 +90,6 @@ class DetailPlacePage extends StatelessWidget {
                               textAlign: TextAlign.left,
                               style: const TextStyle(
                                 fontSize: 16.0,
-                                fontFamily: 'Oxygen',
                               ),
                             ),
                           ],
@@ -104,7 +100,6 @@ class DetailPlacePage extends StatelessWidget {
                           textAlign: TextAlign.left,
                           style: const TextStyle(
                             fontSize: 16.0,
-                            fontFamily: 'Oxygen',
                           ),
                         ),
                         const SizedBox(height: 24.0),
@@ -122,7 +117,6 @@ class DetailPlacePage extends StatelessWidget {
                             const SizedBox(width: 8.0),
                             Text(
                               'Indonesia\n${place.location}',
-                              style: informationTextStyle,
                             ),
                           ],
                         ),
@@ -141,7 +135,6 @@ class DetailPlacePage extends StatelessWidget {
                             const SizedBox(width: 8.0),
                             Text(
                               'Buka\n${place.openTime}',
-                              style: informationTextStyle,
                             ),
                           ],
                         ),
@@ -196,7 +189,6 @@ class DetailPlacePage extends StatelessWidget {
                 children: [
                   Text(
                     'Rp ${place.ticketPrice},00/Orang',
-                    style: informationTextStyle,
                   ),
                   ElevatedButton(
                     onPressed: () {},
