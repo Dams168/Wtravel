@@ -30,7 +30,7 @@ var articleList = [
         'Biasanya, tiket pesawat dengan harga terendah bisa didapatkan saat low season, seperti seminggu setelah liburan tahun baru.\n\nNamun, jangan khawatir jika Anda ingin mengunjungi Labuan Bajo di waktu lainnya karena Traveloka siap membantu Anda berburu tiket dengan harga terjangkau di waktu-waktu yang Anda inginkan. Untuk mencegah naiknya harga tiket menjadi lebih tinggi, ada baiknya Anda mulai berburu tiket jauh-jauh hari sebelumnya.',
     imageAsset: 'assets/images/labuanBajo.png',
     imageUrls: [
-      'https://akcdn.detik.net.id/community/media/visual/2023/10/31/gunung-padang-2_169.jpeg?w=700&q=90',
+      'https://awsimages.detik.net.id/community/media/visual/2021/07/05/wisata-super-prioritas-labuan-bajo_169.jpeg?w=600&q=90',
     ],
   ),
   Article(
@@ -48,7 +48,7 @@ var articleList = [
         'Jangan lupa membawa perlengkapan fotografi untuk mengabadikan momen tak terlupakan di pulau ini.',
     imageAsset: 'assets/images/nusapenida.jpg',
     imageUrls: [
-      'https://akcdn.detik.net.id/community/media/visual/2023/10/31/gunung-padang-2_169.jpeg?w=700&q=90',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/f5/3e/e5/nusa-penida-island.jpg?w=1200&h=-1&s=1',
     ],
   ),
   Article(
@@ -64,9 +64,9 @@ var articleList = [
         '4. Pusat Kerajinan Handmade\n\n'
         'Jangan lewatkan kesempatan untuk berbelanja oleh-oleh khas Danau Toba. Pusat kerajinan di sekitar danau menawarkan berbagai produk handmade, termasuk tenun ulos, patung kayu, dan perhiasan etnik.\n\n'
         'Dengan keindahan alam dan keberagaman budaya, Danau Toba menjadi destinasi wisata yang mengesankan di Pulau Sumatera.',
-    imageAsset: 'assets/images/nusapenida.jpg',
+    imageAsset: 'assets/images/danautoba.jpg',
     imageUrls: [
-      'https://akcdn.detik.net.id/community/media/visual/2023/10/31/gunung-padang-2_169.jpeg?w=700&q=90',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/18/02/7f/ef/we-provide-lake-toba.jpg?w=800&h=-1&s=1',
     ],
   ),
   Article(
@@ -83,9 +83,9 @@ var articleList = [
         '4. Aktivitas Spiritual dan Budaya\n\n'
         'Selain sebagai destinasi wisata, Candi Borobudur juga sering digunakan untuk kegiatan spiritual. Acara persembahyangan dan festival budaya sering diadakan di tempat ini, memberikan pengalaman wisata yang lebih mendalam.\n\n'
         'Dengan keindahan seni dan kearifan lokal yang terpancar dari setiap reliefnya, Candi Borobudur tetap menjadi destinasi wisata budaya yang menakjubkan.',
-    imageAsset: 'assets/images/nusapenida.jpg',
+    imageAsset: 'assets/images/borobudur.jpg',
     imageUrls: [
-      'https://akcdn.detik.net.id/community/media/visual/2023/10/31/gunung-padang-2_169.jpeg?w=700&q=90',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/ef/47/1c/borobudur-temple.jpg?w=1200&h=-1&s=1',
     ],
   ),
   Article(
@@ -102,7 +102,7 @@ var articleList = [
         '4. Tempat Studi dan Penelitian\n\n'
         'Bagi para peneliti dan akademisi, Gunung Padang menjadi tempat studi yang menarik. Dengan berbagai teori tentang fungsi dan asal-usulnya, situs ini terus menjadi fokus penelitian ilmiah.\n\n'
         'Dengan keunikan sejarah dan pesona alamnya, Gunung Padang adalah destinasi yang unik dan memikat untuk dikunjungi.',
-    imageAsset: 'assets/images/nusapenida.jpg',
+    imageAsset: 'assets/images/gunungpadang.jpeg',
     imageUrls: [
       'https://akcdn.detik.net.id/community/media/visual/2023/10/31/gunung-padang-2_169.jpeg?w=700&q=90',
     ],

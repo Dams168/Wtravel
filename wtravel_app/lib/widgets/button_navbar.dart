@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/screens/dashboard_screen.dart';
 import 'package:wtravel_app/screens/panduan_screen.dart';
+import 'package:wtravel_app/screens/profile_screen.dart';
 
 enum MenuState { beranda, perjalanan, panduan, profile }
 
@@ -86,7 +87,14 @@ class ButtonNavBar extends StatelessWidget {
                   : inActiveIconColor,
             ),
             onPressed: () {
-              // Tambahkan logika untuk menu profile
+              if (selectedMenu != MenuState.profile) {
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const ProfileScreen(),
+                  ),
+                );
+              }
             },
           ),
         ],
