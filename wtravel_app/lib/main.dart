@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wtravel_app/perjalanan_simpan.dart';
+import 'package:wtravel_app/buat_koleksi_baru.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const PerjalananSimpan(),
+      home: const BuatKoleksiBaru(),
     );
   }
 }
