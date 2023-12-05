@@ -2,28 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/models/tourism_place.dart';
 import 'package:wtravel_app/size_config.dart';
+import 'package:wtravel_app/widgets/review_card.dart';
 
 var informationTextStyle = const TextStyle(fontFamily: 'Oxygen');
 
-class DetailScreen extends StatelessWidget {
+class DetailPlaceScreen extends StatelessWidget {
   final TourismPlace place;
 
-  const DetailScreen({Key? key, required this.place}) : super(key: key);
+  const DetailPlaceScreen({Key? key, required this.place}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return DetailMobilePage(place: place);
+    return DetailPlacePage(place: place);
   }
 }
 
-class DetailMobilePage extends StatelessWidget {
+class DetailPlacePage extends StatelessWidget {
   final TourismPlace place;
 
-  const DetailMobilePage({Key? key, required this.place}) : super(key: key);
+  const DetailPlacePage({Key? key, required this.place}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    // Initialize SizeConfig
     SizeConfig().init(context);
 
     return Scaffold(
@@ -107,6 +107,25 @@ class DetailMobilePage extends StatelessWidget {
                             fontFamily: 'Oxygen',
                           ),
                         ),
+                        const SizedBox(height: 24.0),
+                        Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(4.0),
+                                color: bgDarkIcon,
+                              ),
+                              padding: const EdgeInsets.all(8.0),
+                              child: const Icon(Icons.location_on),
+                            ),
+                            const SizedBox(width: 8.0),
+                            Text(
+                              'Indonesia\n${place.location}',
+                              style: informationTextStyle,
+                            ),
+                          ],
+                        ),
                         const SizedBox(height: 16.0),
                         Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -116,26 +135,7 @@ class DetailMobilePage extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(4.0),
                                 color: bgDarkIcon,
                               ),
-                              padding: const EdgeInsets.all(4.0),
-                              child: const Icon(Icons.location_on),
-                            ),
-                            const SizedBox(width: 8.0),
-                            Text(
-                              'Lokasi\n ${place.location}',
-                              style: informationTextStyle,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 8.0),
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(4.0),
-                                color: bgDarkIcon,
-                              ),
-                              padding: const EdgeInsets.all(4.0),
+                              padding: const EdgeInsets.all(8.0),
                               child: const Icon(Icons.access_time_filled),
                             ),
                             const SizedBox(width: 8.0),
@@ -163,12 +163,31 @@ class DetailMobilePage extends StatelessWidget {
                       }).toList(),
                     ),
                   ),
-                  // Add other content as needed
+                  Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text(
+                          'Ulasan',
+                          style: TextStyle(
+                            fontSize: 24.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const SizedBox(height: 16.0),
+                        Column(
+                          children: place.reviews.map((review) {
+                            return ReviewCard(review: review);
+                          }).toList(),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
-          // Fixed Bottom Navigation Bar
           BottomAppBar(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -187,7 +206,7 @@ class DetailMobilePage extends StatelessWidget {
                     child: const Text(
                       'Tambah',
                       style: TextStyle(
-                        fontSize: 12, // Adjust the font size as needed
+                        fontSize: 12,
                         color: Colors.white,
                       ),
                     ),
@@ -217,7 +236,7 @@ class _FavoriteButtonState extends State<FavoriteButton> {
     return Container(
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
-        color: Colors.white, // Set the background color to white
+        color: Colors.white,
       ),
       child: IconButton(
         icon: Icon(

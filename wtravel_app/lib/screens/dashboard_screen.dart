@@ -134,7 +134,7 @@ class TourismPlaceList extends StatelessWidget {
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) {
-                        return DetailScreen(place: place);
+                        return DetailPlaceScreen(place: place);
                       }));
                     },
                   ),
