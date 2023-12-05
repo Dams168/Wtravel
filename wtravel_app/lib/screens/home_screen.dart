@@ -57,23 +57,27 @@ class HomeScreen extends StatelessWidget {
                     },
                   ),
                   const SizedBox(height: 20),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) {
-                          return const LoginScreen();
-                        }),
-                      );
-                    },
-                    child: const Text(
-                      "Sudah memiliki akun? Masuk",
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: primaryColor,
-                        fontWeight: FontWeight.bold,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text("Sudah punya akun? "),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const LoginScreen()),
+                          );
+                        },
+                        child: const Text(
+                          "Masuk",
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ),
                 ],
               ),

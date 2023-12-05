@@ -3,7 +3,7 @@ import 'package:wtravel_app/screens/perjalanan_koleksi_screen.dart';
 import 'package:wtravel_app/widgets/button_navbar.dart';
 
 class PerjalananSimpan extends StatelessWidget {
-  const PerjalananSimpan({Key? key});
+  const PerjalananSimpan({super.key});
 
   @override
   Widget build(BuildContext context) {

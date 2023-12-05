@@ -217,6 +217,7 @@ class FavoriteButton extends StatefulWidget {
   const FavoriteButton({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _FavoriteButtonState createState() => _FavoriteButtonState();
 }
 
