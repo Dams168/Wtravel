@@ -20,7 +20,7 @@ class SocialMediaCard extends StatelessWidget {
             EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(5)),
         padding: EdgeInsets.all(getProportionateScreenWidth(5)),
         height: getProportionateScreenHeight(60),
-        width: getProportionateScreenWidth(100),
+        width: getProportionateScreenWidth(120),
         decoration: const BoxDecoration(
           color: Color(0xFFF5F6F9),
         ),
@@ -28,7 +28,7 @@ class SocialMediaCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SvgPicture.asset(
-              icon, // You can adjust the width as needed
+              icon,
             ),
             const SizedBox(width: 8),
             Text(

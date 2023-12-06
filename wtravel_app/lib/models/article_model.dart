@@ -104,7 +104,7 @@ var articleList = [
         'Dengan keunikan sejarah dan pesona alamnya, Gunung Padang adalah destinasi yang unik dan memikat untuk dikunjungi.',
     imageAsset: 'assets/images/gunungpadang.jpeg',
     imageUrls: [
-      'https://akcdn.detik.net.id/community/media/visual/2023/10/31/gunung-padang-2_169.jpeg?w=700&q=90',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/07/fe/e0/king-s-resting-stones.jpg?w=1200&h=-1&s=1',
     ],
   ),
 ];
