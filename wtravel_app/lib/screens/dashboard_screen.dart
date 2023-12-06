@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:wtravel_app/models/article_model.dart';
 import 'package:wtravel_app/models/tourism_place.dart';
+import 'package:wtravel_app/screens/article_list_screen.dart';
 import 'package:wtravel_app/screens/detail_article_screen.dart';
 import 'package:wtravel_app/screens/detail_place_screen.dart';
+import 'package:wtravel_app/screens/tourism_place_list_screen.dart';
 import 'package:wtravel_app/widgets/article_card.dart';
 import 'package:wtravel_app/widgets/button_navbar.dart';
 import 'package:wtravel_app/widgets/category_card.dart';
@@ -143,14 +145,39 @@ class TourismPlaceList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Text(
-            'Destinasi Populer',
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-            ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Destinasi Populer',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return AllTourismPlacesScreen(
+                            allTourismPlaces: tourismPlaces);
+                      },
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Lihat Semua',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16.0,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         SizedBox(
@@ -158,16 +185,18 @@ class TourismPlaceList extends StatelessWidget {
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: tourismPlaces.map((place) {
+              children: tourismPlaces.take(3).map((place) {
                 return SizedBox(
                   width: 200,
                   child: TourismCard(
                     place: place,
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return DetailPlaceScreen(place: place);
-                      }));
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) {
+                          return DetailPlaceScreen(place: place);
+                        }),
+                      );
                     },
                   ),
                 );
@@ -190,18 +219,42 @@ class ArticleList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Padding(
-          padding: EdgeInsets.all(16.0),
-          child: Text(
-            'Artikel Terbaru',
-            style: TextStyle(
-              fontSize: 18.0,
-              fontWeight: FontWeight.bold,
-            ),
+        Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              const Text(
+                'Artikel Terbaru',
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return AllArticlesScreen(allArticles: articles);
+                      },
+                    ),
+                  );
+                },
+                child: const Text(
+                  'Lihat Semua',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 16.0,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
         Column(
-          children: articles.map((article) {
+          children: articles.take(3).map((article) {
             return Padding(
               padding: const EdgeInsets.symmetric(vertical: 4.0),
               child: SizedBox(
