@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+
+import 'package:provider/provider.dart';
 import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/models/tourism_place.dart';
+import 'package:wtravel_app/services/favorite_places_provider.dart';
 import 'package:wtravel_app/size_config.dart';
 import 'package:wtravel_app/widgets/review_card.dart';
 
@@ -53,7 +56,7 @@ class DetailPlacePage extends StatelessWidget {
                                   },
                                 ),
                               ),
-                              const FavoriteButton(),
+                              FavoriteButton(place: place),
                             ],
                           ),
                         ),
@@ -213,19 +216,16 @@ class DetailPlacePage extends StatelessWidget {
   }
 }
 
-class FavoriteButton extends StatefulWidget {
-  const FavoriteButton({Key? key}) : super(key: key);
+class FavoriteButton extends StatelessWidget {
+  final TourismPlace place;
 
-  @override
-  // ignore: library_private_types_in_public_api
-  _FavoriteButtonState createState() => _FavoriteButtonState();
-}
-
-class _FavoriteButtonState extends State<FavoriteButton> {
-  bool isFavorite = false;
+  const FavoriteButton({Key? key, required this.place}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    bool isFavorite =
+        Provider.of<FavoritePlacesProvider>(context).isFavorite(place);
+
     return Container(
       decoration: const BoxDecoration(
         shape: BoxShape.circle,
@@ -237,11 +237,20 @@ class _FavoriteButtonState extends State<FavoriteButton> {
           color: Colors.yellow,
         ),
         onPressed: () {
-          setState(() {
-            isFavorite = !isFavorite;
-          });
+          _toggleFavorite(context);
         },
       ),
     );
+  }
+
+  void _toggleFavorite(BuildContext context) {
+    FavoritePlacesProvider favoritesProvider =
+        Provider.of<FavoritePlacesProvider>(context, listen: false);
+
+    if (favoritesProvider.isFavorite(place)) {
+      favoritesProvider.removeFromFavorites(place);
+    } else {
+      favoritesProvider.addToFavorites(place);
+    }
   }
 }
