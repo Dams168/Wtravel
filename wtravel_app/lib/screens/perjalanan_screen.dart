@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/screens/perjalanan_koleksi_screen.dart';
 import 'package:wtravel_app/screens/perjalanan_simpan_screen.dart';
 import 'package:wtravel_app/widgets/button_navbar.dart';
@@ -27,8 +28,8 @@ class _PerjalananState extends State<Perjalanan>
         children: [
           Image.asset(
             imagePath,
-            height: 24, // Adjusted height
-            width: 24, // Adjusted width
+            height: 24,
+            width: 24,
             fit: BoxFit.contain,
           ),
           const SizedBox(width: 5),
@@ -59,7 +60,7 @@ class _PerjalananState extends State<Perjalanan>
           const SizedBox(height: 15),
           TabBar(
             controller: _tabController,
-            labelColor: const Color(0xFF140C47),
+            labelColor: primaryColor,
             unselectedLabelColor: const Color(0xFFC2C5D6),
             tabs: [
               buildTab('Koleksi', 'assets/icons/perjalanan-koleksi-blue.png'),

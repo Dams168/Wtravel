@@ -48,8 +48,9 @@ class ButtonNavBar extends StatelessWidget {
               if (selectedMenu != MenuState.beranda) {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const DashboardScreen(),
+                  PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => const DashboardScreen(),
+                    transitionDuration: const Duration(seconds: 0),
                   ),
                 );
               }
@@ -64,8 +65,9 @@ class ButtonNavBar extends StatelessWidget {
               if (selectedMenu != MenuState.perjalanan) {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const Perjalanan(),
+                  PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => const Perjalanan(),
+                    transitionDuration: const Duration(seconds: 0),
                   ),
                 );
               }
@@ -80,8 +82,9 @@ class ButtonNavBar extends StatelessWidget {
               if (selectedMenu != MenuState.panduan) {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const PanduanScreen(),
+                  PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => const PanduanScreen(),
+                    transitionDuration: const Duration(seconds: 0),
                   ),
                 );
               }
@@ -98,8 +101,9 @@ class ButtonNavBar extends StatelessWidget {
               if (selectedMenu != MenuState.profile) {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(
-                    builder: (context) => const ProfileScreen(),
+                  PageRouteBuilder(
+                    pageBuilder: (_, __, ___) => const ProfileScreen(),
+                    transitionDuration: const Duration(seconds: 0),
                   ),
                 );
               }
