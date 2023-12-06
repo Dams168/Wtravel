@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:wtravel_app/buat_koleksi_baru.dart';
 import 'package:wtravel_app/tambah_item.dart';
 
 void main() {
@@ -17,7 +16,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const BuatKoleksiBaru(),
+      home: const TambahItem(),
     );
   }
 }
