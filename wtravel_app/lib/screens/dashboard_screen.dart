@@ -19,39 +19,26 @@ class DashboardScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Dashboard'),
         actions: [
-          Expanded(
-            child: Padding(
-              padding: const EdgeInsets.all(4),
-              child: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      onChanged: (value) {},
-                      decoration: InputDecoration(
-                        hintText: 'Cari Destinasi Wisata',
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(10.0),
-                          borderSide: const BorderSide(
-                            color: Colors.white,
-                          ),
-                        ),
-                        prefixIcon: const Icon(Icons.search),
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 16),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.notifications),
-                  ),
-                  const SizedBox(width: 16),
-                  IconButton(
-                    onPressed: () {},
-                    icon: const Icon(Icons.message),
-                  ),
-                ],
-              ),
-            ),
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => SearchScreen(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.search),
+          ),
+          const SizedBox(width: 16),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.notifications),
+          ),
+          const SizedBox(width: 16),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.message),
           ),
         ],
       ),
@@ -275,6 +262,70 @@ class ArticleList extends StatelessWidget {
           }).toList(),
         ),
       ],
+    );
+  }
+}
+
+class SearchScreen extends StatefulWidget {
+  const SearchScreen({super.key});
+
+  @override
+  _SearchScreenState createState() => _SearchScreenState();
+}
+
+class _SearchScreenState extends State<SearchScreen> {
+  TextEditingController searchController = TextEditingController();
+  List<TourismPlace> searchResults = [];
+
+  void _filterTourismPlaces(String query) {
+    List<TourismPlace> filteredList = tourismPlaceList
+        .where(
+            (place) => place.name.toLowerCase().contains(query.toLowerCase()))
+        .toList();
+
+    setState(() {
+      searchResults = filteredList;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: TextField(
+          controller: searchController,
+          onChanged: (value) {
+            _filterTourismPlaces(value);
+          },
+          decoration: const InputDecoration(
+            hintText: 'Cari Destinasi Wisata',
+            border: InputBorder.none,
+            prefixIcon: Icon(Icons.search),
+          ),
+        ),
+      ),
+      body: Column(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemCount: searchResults.length,
+              itemBuilder: (context, index) {
+                return TourismCard(
+                  place: searchResults[index],
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) {
+                        return DetailPlaceScreen(place: searchResults[index]);
+                      }),
+                    );
+                  },
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
