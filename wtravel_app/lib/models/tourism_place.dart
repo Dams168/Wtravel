@@ -2,6 +2,7 @@ class TourismPlace {
   String name;
   String location;
   String description;
+  String category;
   String openDays;
   String openTime;
   String ticketPrice;
@@ -14,6 +15,7 @@ class TourismPlace {
     required this.name,
     required this.location,
     required this.description,
+    required this.category,
     required this.openDays,
     required this.openTime,
     required this.ticketPrice,
@@ -46,6 +48,7 @@ var tourismPlaceList = [
     location: 'NTT',
     description:
         'Pulau Komodo menjadi rumah bagi Komodo, kadal terbesar di Bumi. Pulau ini juga dikenal dengan pemandangan indahnya, terumbu karang, dan pantai berpasir merah. Keindahan alamnya menarik wisatawan untuk menjelajahi keanekaragaman hayati dan keunikan pulau ini.',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '24 Jam',
     ticketPrice: '300.000',
@@ -88,6 +91,7 @@ var tourismPlaceList = [
     location: 'Bali',
     description:
         'Nusa Penida adalah pulau kecil di sebelah tenggara Bali yang terkenal dengan pantai-pantainya yang eksotis, terumbu karang, dan pemandangan alam yang menakjubkan. Jelajahi keindahan tebing tebingnya, air terjun yang tersembunyi, dan nuansa keasrian alam yang sulit ditandingi.',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '24 Jam',
     ticketPrice: '300.000',
@@ -130,6 +134,7 @@ var tourismPlaceList = [
     location: 'Jawa Timur',
     description:
         'Gunung Bromo adalah salah satu gunung berapi yang paling terkenal di Indonesia, terkenal dengan kawahnya yang spektakuler dan lanskap pegunungan yang menakjubkan. Rasakan petualangan mendaki ke puncak dan nikmati pemandangan matahari terbit yang memukau.',
+    category: 'Gunung',
     openDays: 'Buka',
     openTime: '24 Jam',
     ticketPrice: '300.000',
@@ -172,6 +177,7 @@ var tourismPlaceList = [
     location: 'Jawa Barat',
     description:
         'Gunung Gede adalah salah satu gunung tertinggi di Jawa Barat. Lokasi ini populer di kalangan pendaki gunung dan menawarkan pemandangan alam yang menakjubkan. Rintislah pendakian Anda dan rasakan kepuasan mencapai puncak yang memukau.',
+    category: 'Gunung',
     openDays: 'Buka',
     openTime: '24 Jam',
     ticketPrice: '300.000',
@@ -214,6 +220,7 @@ var tourismPlaceList = [
     location: 'Jawa Barat',
     description:
         'Taman Nasional Cibodas adalah salah satu taman nasional di Indonesia. Terletak di Jawa Barat, taman ini terkenal dengan keindahan alamnya, termasuk flora dan fauna yang unik. Jelajahi keasrian alam dan nikmati keindahan taman yang memikat hati.',
+    category: 'Gunung',
     openDays: 'Buka',
     openTime: '24 Jam',
     ticketPrice: '300.000',
@@ -256,6 +263,7 @@ var tourismPlaceList = [
     location: 'Sulawesi Utara',
     description:
         'Pulau Bunaken terkenal dengan keindahan bawah lautnya yang luar biasa. Destinasi ini menjadi surga bagi penyelam dengan terumbu karang yang indah dan beragam spesies ikan. Jelajahi kekayaan biota laut yang menakjubkan.',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '08.00 - 18.00',
     ticketPrice: '250.000',
@@ -298,6 +306,7 @@ var tourismPlaceList = [
     location: 'Sulawesi Selatan',
     description:
         'Pantai Tanjung Bira menawarkan pasir putih yang lembut dan air laut yang jernih. Terletak di ujung Sulawesi, pantai ini menjadi tempat ideal untuk bersantai, berenang, dan menikmati keindahan alam pesisir.',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '08.00 - 17.00',
     ticketPrice: '50.000',
@@ -340,6 +349,7 @@ var tourismPlaceList = [
     location: 'Kalimantan Timur',
     description:
         'Pulau Derawan terkenal dengan keindahan bawah lautnya yang menakjubkan. Destinasi ini menjadi surganya penyelam dengan terumbu karang, penyu, dan spesies laut lainnya. Nikmati petualangan menyelam yang tak terlupakan.',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '09.00 - 18.00',
     ticketPrice: '200.000',
@@ -382,6 +392,7 @@ var tourismPlaceList = [
     location: 'Aceh',
     description:
         'Pulau Weh adalah pulau terluar di Indonesia yang terkenal dengan keindahan bawah lautnya. Nikmati keindahan terumbu karang, pemandangan laut yang jernih, dan aktivitas menyelam yang menarik. Rasakan keajaiban bawah laut Pulau Weh.',
+    category: 'pantai',
     openDays: 'Buka',
     openTime: '08.00 - 17.00',
     ticketPrice: '150.000',
@@ -424,6 +435,7 @@ var tourismPlaceList = [
     location: 'Maluku Utara',
     description:
         'Pulau Morotai adalah destinasi eksotis di Maluku Utara yang menawarkan keindahan pantai pasir putih, terumbu karang, dan sejarah perang dunia. Jelajahi kekayaan bawah laut dan eksplorasi warisan sejarah Pulau Morotai.',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '09.00 - 18.00',
     ticketPrice: '100.000',

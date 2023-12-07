@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:wtravel_app/screens/tambah_item_koleksi.dart';
 
 class BuatKoleksiBaru extends StatefulWidget {
   const BuatKoleksiBaru({super.key});
@@ -155,7 +156,14 @@ class _MyWidgetState extends State<BuatKoleksiBaru> {
               children: [
                 Expanded(
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TambahItem(),
+                        ),
+                      );
+                    },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF140C47),
                       shape: RoundedRectangleBorder(

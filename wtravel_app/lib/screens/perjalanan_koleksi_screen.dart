@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wtravel_app/screens/detail_koleksi_screen.dart';
 import 'package:wtravel_app/screens/koleksi_baru_screen.dart';
 
 class PerjalananKoleksi extends StatelessWidget {
@@ -14,15 +15,25 @@ class PerjalananKoleksi extends StatelessWidget {
             children: [
               Stack(
                 children: [
-                  Container(
-                    margin: const EdgeInsets.symmetric(horizontal: 15.0),
-                    child: ClipRRect(
-                      borderRadius: BorderRadius.circular(5),
-                      child: Image.asset(
-                        'assets/images/perjalanan-koleksi-gunung.jpg',
-                        height: 211,
-                        fit: BoxFit.cover,
-                        width: MediaQuery.of(context).size.width - 30,
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DetailKoleksi(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 15.0),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(5),
+                        child: Image.asset(
+                          'assets/images/perjalanan-koleksi-gunung.jpg',
+                          height: 211,
+                          fit: BoxFit.cover,
+                          width: MediaQuery.of(context).size.width - 30,
+                        ),
                       ),
                     ),
                   ),
@@ -82,7 +93,7 @@ class PerjalananKoleksi extends StatelessWidget {
               ),
             ],
           ),
-          const SizedBox(height: 250),
+          const SizedBox(height: 350),
           ElevatedButton(
             onPressed: () {
               Navigator.push(
