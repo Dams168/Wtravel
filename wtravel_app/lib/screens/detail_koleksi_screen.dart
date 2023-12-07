@@ -8,13 +8,16 @@ class DetailKoleksi extends StatelessWidget {
     return Scaffold(
       backgroundColor: const Color(0xFFF0F3F5),
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              'Gunung',
-              style: TextStyle(
-                  fontWeight: FontWeight.bold, color: Color(0xFF140C47)),
+            Container(
+              margin: const EdgeInsets.only(right: 45),
+              child: const Text(
+                'Gunung',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold, color: Color(0xFF140C47)),
+              ),
             ),
           ],
         ),
@@ -158,7 +161,7 @@ class DetailKoleksi extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  const SizedBox(width: 100),
+                                  const SizedBox(width: 88),
                                   Container(
                                     margin: const EdgeInsets.only(
                                         left: 15, right: 10),
@@ -268,7 +271,7 @@ class DetailKoleksi extends StatelessWidget {
                                       ),
                                     ],
                                   ),
-                                  const SizedBox(width: 55),
+                                  const SizedBox(width: 38),
                                   Container(
                                     margin: const EdgeInsets.only(
                                         left: 15, right: 10),

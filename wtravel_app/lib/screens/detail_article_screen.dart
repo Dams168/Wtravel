@@ -16,14 +16,22 @@ class DetailArticleScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.only(right: 5.0),
-              child: Image.asset(
-                'assets/images/appbar-logo.png',
+              margin: const EdgeInsets.only(right: 45),
+              child: Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(right: 5.0),
+                    child: Image.asset(
+                      'assets/images/appbar-logo.png',
+                    ),
+                  ),
+                  const Text(
+                    'WTravel Guide',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 22.0),
+                  ),
+                ],
               ),
-            ),
-            const Text(
-              'WTravel Guide',
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22.0),
             ),
           ],
         ),

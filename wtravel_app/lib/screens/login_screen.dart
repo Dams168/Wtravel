@@ -76,7 +76,7 @@ class LoginForm extends StatelessWidget {
           ),
           SizedBox(height: SizeConfig.screenHeight * 0.02),
           const Text(
-            "--------Atau lanjutkan dengan--------",
+            "---Atau lanjutkan dengan---",
             style: TextStyle(
               fontSize: 18,
             ),

@@ -18,12 +18,12 @@ class _SplashScreenState extends State<SplashScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset(
-            'images/logo.png',
-            width: 60,
+            'assets/images/logo.png',
+            width: 100,
           ),
         ],
       ),
-      splashIconSize: 400,
+      splashIconSize: 200,
       splashTransition: SplashTransition.fadeTransition,
       duration: 2000,
       backgroundColor: primaryColor,

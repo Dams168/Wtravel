@@ -130,7 +130,7 @@ var tourismPlaceList = [
     ],
   ),
   TourismPlace(
-    name: 'Gunung Bromo',
+    name: 'Bromo',
     location: 'Jawa Timur',
     description:
         'Gunung Bromo adalah salah satu gunung berapi yang paling terkenal di Indonesia, terkenal dengan kawahnya yang spektakuler dan lanskap pegunungan yang menakjubkan. Rasakan petualangan mendaki ke puncak dan nikmati pemandangan matahari terbit yang memukau.',
@@ -173,7 +173,7 @@ var tourismPlaceList = [
     ],
   ),
   TourismPlace(
-    name: 'Gunung Gede',
+    name: 'Gede',
     location: 'Jawa Barat',
     description:
         'Gunung Gede adalah salah satu gunung tertinggi di Jawa Barat. Lokasi ini populer di kalangan pendaki gunung dan menawarkan pemandangan alam yang menakjubkan. Rintislah pendakian Anda dan rasakan kepuasan mencapai puncak yang memukau.',
@@ -216,7 +216,7 @@ var tourismPlaceList = [
     ],
   ),
   TourismPlace(
-    name: 'Taman Nasional Cibodas',
+    name: 'Taman Cibodas',
     location: 'Jawa Barat',
     description:
         'Taman Nasional Cibodas adalah salah satu taman nasional di Indonesia. Terletak di Jawa Barat, taman ini terkenal dengan keindahan alamnya, termasuk flora dan fauna yang unik. Jelajahi keasrian alam dan nikmati keindahan taman yang memikat hati.',
@@ -260,7 +260,7 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Pulau Bunaken',
-    location: 'Sulawesi Utara',
+    location: 'Sulawesi',
     description:
         'Pulau Bunaken terkenal dengan keindahan bawah lautnya yang luar biasa. Destinasi ini menjadi surga bagi penyelam dengan terumbu karang yang indah dan beragam spesies ikan. Jelajahi kekayaan biota laut yang menakjubkan.',
     category: 'Pantai',
@@ -302,8 +302,8 @@ var tourismPlaceList = [
     ],
   ),
   TourismPlace(
-    name: 'Pantai Tanjung Bira',
-    location: 'Sulawesi Selatan',
+    name: 'Tanjung Bira',
+    location: 'Sulawesi',
     description:
         'Pantai Tanjung Bira menawarkan pasir putih yang lembut dan air laut yang jernih. Terletak di ujung Sulawesi, pantai ini menjadi tempat ideal untuk bersantai, berenang, dan menikmati keindahan alam pesisir.',
     category: 'Pantai',
@@ -346,7 +346,7 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Pulau Derawan',
-    location: 'Kalimantan Timur',
+    location: 'Kalimantan',
     description:
         'Pulau Derawan terkenal dengan keindahan bawah lautnya yang menakjubkan. Destinasi ini menjadi surganya penyelam dengan terumbu karang, penyu, dan spesies laut lainnya. Nikmati petualangan menyelam yang tak terlupakan.',
     category: 'Pantai',
@@ -392,7 +392,7 @@ var tourismPlaceList = [
     location: 'Aceh',
     description:
         'Pulau Weh adalah pulau terluar di Indonesia yang terkenal dengan keindahan bawah lautnya. Nikmati keindahan terumbu karang, pemandangan laut yang jernih, dan aktivitas menyelam yang menarik. Rasakan keajaiban bawah laut Pulau Weh.',
-    category: 'pantai',
+    category: 'Pantai',
     openDays: 'Buka',
     openTime: '08.00 - 17.00',
     ticketPrice: '150.000',
@@ -432,7 +432,7 @@ var tourismPlaceList = [
   ),
   TourismPlace(
     name: 'Pulau Morotai',
-    location: 'Maluku Utara',
+    location: 'Maluku',
     description:
         'Pulau Morotai adalah destinasi eksotis di Maluku Utara yang menawarkan keindahan pantai pasir putih, terumbu karang, dan sejarah perang dunia. Jelajahi kekayaan bawah laut dan eksplorasi warisan sejarah Pulau Morotai.',
     category: 'Pantai',

@@ -195,11 +195,12 @@ class TambahItem extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
+                  Navigator.pushAndRemoveUntil(
                     context,
                     MaterialPageRoute(
                       builder: (context) => const Perjalanan(),
                     ),
+                    (route) => false,
                   );
                 },
                 style: ElevatedButton.styleFrom(

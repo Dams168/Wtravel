@@ -11,11 +11,13 @@ class TourismCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double cardWidth = MediaQuery.of(context).size.width * 0.8;
+
     return InkWell(
       onTap: onTap,
       child: Card(
         child: SizedBox(
-          width: 300, // Set the desired width
+          width: cardWidth,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -28,10 +30,10 @@ class TourismCard extends StatelessWidget {
                   height: 125,
                 ),
               ),
-              const SizedBox(height: 8),
+              const SizedBox(height: 4),
               Container(
                 width: double.infinity, // Set the width of the text content
-                padding: const EdgeInsets.all(8),
+                padding: const EdgeInsets.all(4),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -42,7 +44,7 @@ class TourismCard extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 4),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -51,10 +53,11 @@ class TourismCard extends StatelessWidget {
                             const Icon(Icons.location_on,
                                 size: 16, color: Colors.grey),
                             const SizedBox(width: 4),
-                            Text(place.location),
+                            Text(place.location,
+                                style: const TextStyle(fontSize: 12)),
                           ],
                         ),
-                        const SizedBox(height: 8),
+                        const SizedBox(height: 4),
                         Container(
                           padding: const EdgeInsets.symmetric(
                               vertical: 4, horizontal: 8),

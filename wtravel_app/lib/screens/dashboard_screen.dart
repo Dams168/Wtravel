@@ -261,7 +261,7 @@ class ArticleList extends StatelessWidget {
 }
 
 class SearchScreen extends StatefulWidget {
-  const SearchScreen({super.key});
+  const SearchScreen({Key? key}) : super(key: key);
 
   @override
   _SearchScreenState createState() => _SearchScreenState();
@@ -298,27 +298,26 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
         ),
       ),
-      body: Column(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: searchResults.length,
-              itemBuilder: (context, index) {
-                return TourismCard(
-                  place: searchResults[index],
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return DetailPlaceScreen(place: searchResults[index]);
-                      }),
-                    );
-                  },
-                );
-              },
-            ),
-          ),
-        ],
+      body: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2,
+          crossAxisSpacing: 8.0,
+          mainAxisSpacing: 8.0,
+        ),
+        itemCount: searchResults.length,
+        itemBuilder: (context, index) {
+          return TourismCard(
+            place: searchResults[index],
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return DetailPlaceScreen(place: searchResults[index]);
+                }),
+              );
+            },
+          );
+        },
       ),
     );
   }

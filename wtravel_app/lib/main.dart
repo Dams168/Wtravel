@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:wtravel_app/screens/dashboard_screen.dart';
 import 'package:wtravel_app/screens/splash_screen.dart';
 import 'package:wtravel_app/services/favorite_places_provider.dart';
 
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
           fontFamily: "Poppins",
           scaffoldBackgroundColor: const Color(0xFFF0F3F5),
         ),
-        home: const DashboardScreen(),
+        home: const SplashScreen(),
       ),
     );
   }
