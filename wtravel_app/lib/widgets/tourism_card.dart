@@ -26,13 +26,13 @@ class TourismCard extends StatelessWidget {
                 child: Image.asset(
                   place.imageAsset,
                   fit: BoxFit.cover,
-                  width: double.infinity, // Make the image fill the width
+                  width: double.infinity,
                   height: 125,
                 ),
               ),
               const SizedBox(height: 4),
               Container(
-                width: double.infinity, // Set the width of the text content
+                width: double.infinity,
                 padding: const EdgeInsets.all(4),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

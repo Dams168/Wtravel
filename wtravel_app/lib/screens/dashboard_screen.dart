@@ -162,7 +162,7 @@ class TourismPlaceList extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 250,
+          height: 200,
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
