@@ -15,22 +15,27 @@ class AllTourismPlacesScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Semua Destinasi'),
       ),
-      body: ListView.builder(
+      body: GridView.builder(
+        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: 2, // Number of columns
+          crossAxisSpacing: 8.0, // Spacing between columns
+          mainAxisSpacing: 8.0, // Spacing between rows
+        ),
         itemCount: allTourismPlaces.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: TourismCard(
+          return GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return DetailPlaceScreen(place: allTourismPlaces[index]);
+                  },
+                ),
+              );
+            },
+            child: TourismCard(
               place: allTourismPlaces[index],
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return DetailPlaceScreen(place: allTourismPlaces[index]);
-                    },
-                  ),
-                );
-              },
             ),
           );
         },

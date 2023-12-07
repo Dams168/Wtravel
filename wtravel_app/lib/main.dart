@@ -9,7 +9,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,10 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'WTravel',
-        theme: ThemeData(fontFamily: "Poppins"),
+        theme: ThemeData(
+          fontFamily: "Poppins",
+          scaffoldBackgroundColor: const Color(0xFFF0F3F5),
+        ),
         home: const DashboardScreen(),
       ),
     );

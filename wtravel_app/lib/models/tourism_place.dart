@@ -251,4 +251,214 @@ var tourismPlaceList = [
       ),
     ],
   ),
+  TourismPlace(
+    name: 'Pulau Bunaken',
+    location: 'Sulawesi Utara',
+    description:
+        'Pulau Bunaken terkenal dengan keindahan bawah lautnya yang luar biasa. Destinasi ini menjadi surga bagi penyelam dengan terumbu karang yang indah dan beragam spesies ikan. Jelajahi kekayaan biota laut yang menakjubkan.',
+    openDays: 'Buka',
+    openTime: '08.00 - 18.00',
+    ticketPrice: '250.000',
+    rating: '4.9',
+    imageAsset: 'assets/images/bunaken.jpg',
+    imageUrls: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/cb/26/7d/bunaken-national-marine.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/cb/2a/34/bunaken-national-marine.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/cb/29/cb/bunaken-national-marine.jpg?w=1200&h=-1&s=1',
+    ],
+    reviews: [
+      TourismReview(
+        reviewerName: 'Michael Anderson',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Diving Paradise',
+        reviewText:
+            'Explored the underwater world of Pulau Bunaken, and it felt like a diving paradise. The coral reefs and marine life are spectacular. An absolute must-visit for diving enthusiasts!',
+        reviewDate: '2023-03-12',
+      ),
+      TourismReview(
+        reviewerName: 'Linda Taylor',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'Colorful Coral Gardens',
+        reviewText:
+            'The colorful coral gardens around Pulau Bunaken are a sight to behold. Snorkeling here is like entering a world of vibrant hues and fascinating marine creatures. Loved the experience!',
+        reviewDate: '2023-02-28',
+      ),
+      TourismReview(
+        reviewerName: 'Chris Roberts',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Unforgettable Snorkeling',
+        reviewText:
+            'Had an unforgettable snorkeling experience at Pulau Bunaken. The crystal-clear waters and diverse marine life make it a perfect spot for snorkelers. Highly recommended for water enthusiasts!',
+        reviewDate: '2023-01-10',
+      ),
+    ],
+  ),
+  TourismPlace(
+    name: 'Pantai Tanjung Bira',
+    location: 'Sulawesi Selatan',
+    description:
+        'Pantai Tanjung Bira menawarkan pasir putih yang lembut dan air laut yang jernih. Terletak di ujung Sulawesi, pantai ini menjadi tempat ideal untuk bersantai, berenang, dan menikmati keindahan alam pesisir.',
+    openDays: 'Buka',
+    openTime: '08.00 - 17.00',
+    ticketPrice: '50.000',
+    rating: '4.7',
+    imageAsset: 'assets/images/tanjung-bira.jpg',
+    imageUrls: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/a4/e8/c7/tanjung-bira.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/a4/e8/c6/tanjung-bira.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/86/9d/28/tanjung-bira.jpg?w=1200&h=-1&s=1',
+    ],
+    reviews: [
+      TourismReview(
+        reviewerName: 'Sarah Thompson',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'Tranquil Paradise',
+        reviewText:
+            'Pantai Tanjung Bira is a tranquil paradise with its soft white sand and clear blue waters. The peaceful atmosphere and scenic beauty make it an ideal getaway for relaxation. Loved every moment!',
+        reviewDate: '2023-03-15',
+      ),
+      TourismReview(
+        reviewerName: 'Ryan Johnson',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Sunset Delight',
+        reviewText:
+            'Witnessed a delightful sunset at Pantai Tanjung Bira. The colors of the sky reflecting on the water create a mesmerizing view. A perfect spot for evening serenity!',
+        reviewDate: '2023-02-25',
+      ),
+      TourismReview(
+        reviewerName: 'Emma Davis',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'Refreshing Swim',
+        reviewText:
+            'Took a refreshing swim at Pantai Tanjung Bira. The clean and clear waters make it perfect for swimming and enjoying the coastal vibes. A great destination for beach lovers!',
+        reviewDate: '2023-01-18',
+      ),
+    ],
+  ),
+  TourismPlace(
+    name: 'Pulau Derawan',
+    location: 'Kalimantan Timur',
+    description:
+        'Pulau Derawan terkenal dengan keindahan bawah lautnya yang menakjubkan. Destinasi ini menjadi surganya penyelam dengan terumbu karang, penyu, dan spesies laut lainnya. Nikmati petualangan menyelam yang tak terlupakan.',
+    openDays: 'Buka',
+    openTime: '09.00 - 18.00',
+    ticketPrice: '200.000',
+    rating: '4.8',
+    imageAsset: 'assets/images/derawan.jpg',
+    imageUrls: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/30/17/58/p-20161001-142932-mt.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/04/a4/6e/2f/derawan-archipelago.jpg?w=1000&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/a6/f0/ea/bird-view-of-jellyfish.jpg?w=1200&h=-1&s=1',
+    ],
+    reviews: [
+      TourismReview(
+        reviewerName: 'Kevin Turner',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Diving Paradise',
+        reviewText:
+            'Pulau Derawan is a diving paradise with its vibrant coral reefs and diverse marine life. The clarity of the water and the underwater landscapes make it a must-visit for scuba enthusiasts!',
+        reviewDate: '2023-03-10',
+      ),
+      TourismReview(
+        reviewerName: 'Lisa White',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'Turtle Haven',
+        reviewText:
+            'Encountered numerous turtles while diving around Pulau Derawan. The presence of these majestic creatures adds to the magic of the underwater world. An unforgettable experience!',
+        reviewDate: '2023-02-20',
+      ),
+      TourismReview(
+        reviewerName: 'Chris Harris',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Spectacular Dive Sites',
+        reviewText:
+            'Explored the spectacular dive sites of Pulau Derawan. The variety of dive spots and the abundance of marine life make it a top destination for diving adventures. Highly recommended!',
+        reviewDate: '2023-01-12',
+      ),
+    ],
+  ),
+  TourismPlace(
+    name: 'Pulau Weh',
+    location: 'Aceh',
+    description:
+        'Pulau Weh adalah pulau terluar di Indonesia yang terkenal dengan keindahan bawah lautnya. Nikmati keindahan terumbu karang, pemandangan laut yang jernih, dan aktivitas menyelam yang menarik. Rasakan keajaiban bawah laut Pulau Weh.',
+    openDays: 'Buka',
+    openTime: '08.00 - 17.00',
+    ticketPrice: '150.000',
+    rating: '4.6',
+    imageAsset: 'assets/images/weh.jpg',
+    imageUrls: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/c0/bd/a3/gua-sarang-dari-atas.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/ec/aa/ca/gua-sarang-10mn-scooter.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/d6/d0/8d/iboih-inn-pier.jpg?w=1200&h=-1&s=1',
+    ],
+    reviews: [
+      TourismReview(
+        reviewerName: 'Amanda Wilson',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'Diving Paradise',
+        reviewText:
+            'Pulau Weh is a diving paradise with its crystal-clear waters and diverse marine life. The coral reefs and underwater landscapes make it a haven for scuba enthusiasts. A must-visit for underwater adventures!',
+        reviewDate: '2023-03-05',
+      ),
+      TourismReview(
+        reviewerName: 'Mark Johnson',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Serene Beaches',
+        reviewText:
+            'Explored the serene beaches of Pulau Weh and was captivated by the beauty of the coastline. The tranquil atmosphere and the clear blue waters make it a perfect escape for beach lovers.',
+        reviewDate: '2023-02-18',
+      ),
+      TourismReview(
+        reviewerName: 'Sophie Turner',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'Picturesque Views',
+        reviewText:
+            'Enjoyed picturesque views of Pulau Weh from various viewpoints. The landscapes and the ocean vistas are breathtaking. An ideal destination for nature lovers and photographers!',
+        reviewDate: '2023-01-25',
+      ),
+    ],
+  ),
+  TourismPlace(
+    name: 'Pulau Morotai',
+    location: 'Maluku Utara',
+    description:
+        'Pulau Morotai adalah destinasi eksotis di Maluku Utara yang menawarkan keindahan pantai pasir putih, terumbu karang, dan sejarah perang dunia. Jelajahi kekayaan bawah laut dan eksplorasi warisan sejarah Pulau Morotai.',
+    openDays: 'Buka',
+    openTime: '09.00 - 18.00',
+    ticketPrice: '100.000',
+    rating: '4.5',
+    imageAsset: 'assets/images/morotai.jpg',
+    imageUrls: [
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/2a/e2/12/little-dodola.jpg?w=1200&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0e/6c/77/4a/dodola-island.jpg?w=800&h=-1&s=1',
+      'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0d/b4/2e/4a/jembatan-pasir-putih.jpg?w=1200&h=-1&s=1',
+    ],
+    reviews: [
+      TourismReview(
+        reviewerName: 'Jonathan Baker',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Historical Exploration',
+        reviewText:
+            'Explored the historical sites of Pulau Morotai and learned about its significance during World War II. The combination of natural beauty and historical heritage makes it a unique and enriching destination.',
+        reviewDate: '2023-03-08',
+      ),
+      TourismReview(
+        reviewerName: 'Ella Davis',
+        reviewerPhoto: 'assets/icons/female-profile.png',
+        reviewHeader: 'White Sandy Beaches',
+        reviewText:
+            'Relaxed on the white sandy beaches of Pulau Morotai. The peaceful ambiance and the clear blue waters create a perfect setting for a day of sunbathing and beach activities.',
+        reviewDate: '2023-02-20',
+      ),
+      TourismReview(
+        reviewerName: 'Liam Harris',
+        reviewerPhoto: 'assets/icons/male-profile.png',
+        reviewHeader: 'Snorkeling Paradise',
+        reviewText:
+            'Discovered a snorkeling paradise in the waters around Pulau Morotai. The vibrant coral reefs and marine life make it a fantastic destination for underwater enthusiasts. Loved the snorkeling experience!',
+        reviewDate: '2023-01-12',
+      ),
+    ],
+  ),
 ];

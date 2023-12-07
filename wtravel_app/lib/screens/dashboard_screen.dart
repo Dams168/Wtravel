@@ -24,7 +24,7 @@ class DashboardScreen extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => SearchScreen(),
+                  builder: (context) => const SearchScreen(),
                 ),
               );
             },
@@ -99,21 +99,15 @@ class CategoryCardList extends StatelessWidget {
         children: [
           CategoryCard(
             imagePath: 'assets/images/pantai_category.png',
-            onPress: () {
-              // Add your logic here
-            },
+            onPress: () {},
           ),
           CategoryCard(
             imagePath: 'assets/images/gunung_category.png',
-            onPress: () {
-              // Add your logic here
-            },
+            onPress: () {},
           ),
           CategoryCard(
             imagePath: 'assets/images/atraksi_category.png',
-            onPress: () {
-              // Add your logic here
-            },
+            onPress: () {},
           ),
         ],
       ),
@@ -172,7 +166,7 @@ class TourismPlaceList extends StatelessWidget {
           child: SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             child: Row(
-              children: tourismPlaces.take(3).map((place) {
+              children: tourismPlaces.take(5).map((place) {
                 return SizedBox(
                   width: 200,
                   child: TourismCard(
