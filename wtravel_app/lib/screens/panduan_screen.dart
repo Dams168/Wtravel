@@ -59,58 +59,76 @@ class ArtikelTeratas extends StatelessWidget {
         SizedBox(
           child: Row(
             children: [
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                  ),
+              Expanded(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
                   child: Row(
                     children: [
-                      Image.asset('assets/icons/panduan-kategori-pantai.png'),
-                      const SizedBox(width: 5),
-                      const Text(
-                        'Pantai',
-                        style: TextStyle(color: Colors.black),
+                      // Kategori Pantai
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 5),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/icons/panduan-kategori-pantai.png',
+                              ),
+                              const SizedBox(width: 5),
+                              const Text(
+                                'Pantai',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset('assets/icons/panduan-kategori-gunung.png'),
-                      const SizedBox(width: 5),
-                      const Text(
-                        'Gunung',
-                        style: TextStyle(color: Colors.black),
+                      // Kategori Gunung
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 5),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/icons/panduan-kategori-gunung.png',
+                              ),
+                              const SizedBox(width: 5),
+                              const Text(
+                                'Gunung',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
-                    ],
-                  ),
-                ),
-              ),
-              Container(
-                margin: const EdgeInsets.symmetric(horizontal: 5),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                  ),
-                  child: Row(
-                    children: [
-                      Image.asset('assets/icons/panduan-kategori-atraksi.png'),
-                      const SizedBox(width: 5),
-                      const Text(
-                        'Atraksi',
-                        style: TextStyle(color: Colors.black),
+                      // Kategori Atraksi
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 5),
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                          ),
+                          child: Row(
+                            children: [
+                              Image.asset(
+                                'assets/icons/panduan-kategori-atraksi.png',
+                              ),
+                              const SizedBox(width: 5),
+                              const Text(
+                                'Atraksi',
+                                style: TextStyle(color: Colors.black),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ],
                   ),

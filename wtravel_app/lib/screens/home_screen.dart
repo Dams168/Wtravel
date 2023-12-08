@@ -12,34 +12,33 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: SafeArea(
+      body: SingleChildScrollView(
+        // Add SingleChildScrollView
         child: Column(
           children: <Widget>[
-            Expanded(
-              child: Column(
-                children: <Widget>[
-                  const Text(
-                    "WTravel",
-                    style: TextStyle(
-                      fontSize: 36,
-                      color: primaryColor,
-                      fontWeight: FontWeight.bold,
-                    ),
+            Column(
+              children: <Widget>[
+                const Text(
+                  "WTravel",
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: primaryColor,
+                    fontWeight: FontWeight.bold,
                   ),
-                  const SizedBox(height: 20),
-                  Image.asset(
-                    "assets/images/home.png",
-                    height: getProportionateScreenHeight(265),
-                    width: getProportionateScreenWidth(235),
-                  ),
-                  const SizedBox(height: 20),
-                  const Text(
-                    "Temukan Destinasi Impian \n Anda Bersama Kami",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 24),
-                  ),
-                ],
-              ),
+                ),
+                const SizedBox(height: 20),
+                Image.asset(
+                  "assets/images/home.png",
+                  height: getProportionateScreenHeight(265),
+                  width: getProportionateScreenWidth(235),
+                ),
+                const SizedBox(height: 20),
+                const Text(
+                  "Temukan Destinasi Impian \n Anda Bersama Kami",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24),
+                ),
+              ],
             ),
             Padding(
               padding: const EdgeInsets.all(50),

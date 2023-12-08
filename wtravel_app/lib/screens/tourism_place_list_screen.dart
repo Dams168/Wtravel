@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:wtravel_app/models/tourism_place.dart';
 import 'package:wtravel_app/screens/detail_place_screen.dart';
 import 'package:wtravel_app/widgets/tourism_card.dart';
+import 'package:wtravel_app/size_config.dart';
 
 class AllTourismPlacesScreen extends StatelessWidget {
   final List<TourismPlace> allTourismPlaces;
@@ -11,13 +12,16 @@ class AllTourismPlacesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int crossAxisCount =
+        (SizeConfig.screenWidth / 180).round(); // Ubah 180 sesuai kebutuhan
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('Semua Destinasi'),
       ),
       body: GridView.builder(
-        gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          crossAxisCount: crossAxisCount,
           crossAxisSpacing: 8.0,
           mainAxisSpacing: 8.0,
         ),
@@ -36,6 +40,7 @@ class AllTourismPlacesScreen extends StatelessWidget {
             },
             child: TourismCard(
               place: allTourismPlaces[index],
+              onTap: () {},
             ),
           );
         },

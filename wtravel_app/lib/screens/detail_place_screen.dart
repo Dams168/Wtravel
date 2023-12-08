@@ -186,12 +186,13 @@ class DetailPlacePage extends StatelessWidget {
           ),
           BottomAppBar(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(4.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     'Rp ${place.ticketPrice},00/Orang',
+                    style: const TextStyle(fontSize: 10),
                   ),
                   ElevatedButton(
                     onPressed: () {},
@@ -201,7 +202,7 @@ class DetailPlacePage extends StatelessWidget {
                     child: const Text(
                       'Tambah',
                       style: TextStyle(
-                        fontSize: 12,
+                        fontSize: 10,
                         color: Colors.white,
                       ),
                     ),

@@ -14,31 +14,30 @@ class SocialMediaCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      child: Container(
-        margin:
-            EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(5)),
-        padding: EdgeInsets.all(getProportionateScreenWidth(5)),
-        height: getProportionateScreenHeight(60),
-        width: getProportionateScreenWidth(120),
-        decoration: const BoxDecoration(
-          color: Color(0xFFF5F6F9),
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgPicture.asset(
-              icon,
-            ),
-            const SizedBox(width: 8),
-            Text(
-              socialMediaName,
-              style: const TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+    return Expanded(
+      child: GestureDetector(
+        child: Container(
+          height: getProportionateScreenHeight(40),
+          width: getProportionateScreenWidth(80),
+          decoration: const BoxDecoration(
+            color: Color(0xFFF5F6F9),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset(
+                icon,
               ),
-            ),
-          ],
+              const SizedBox(width: 8),
+              Text(
+                socialMediaName,
+                style: const TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

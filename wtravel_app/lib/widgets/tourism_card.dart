@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wtravel_app/constants.dart';
 import 'package:wtravel_app/models/tourism_place.dart';
+import 'package:wtravel_app/size_config.dart';
 
 class TourismCard extends StatelessWidget {
   final TourismPlace place;
@@ -11,7 +12,9 @@ class TourismCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double cardWidth = MediaQuery.of(context).size.width * 0.8;
+    SizeConfig().init(context);
+
+    double cardWidth = SizeConfig.screenWidth * 0.4;
 
     return InkWell(
       onTap: onTap,
@@ -27,21 +30,25 @@ class TourismCard extends StatelessWidget {
                   place.imageAsset,
                   fit: BoxFit.cover,
                   width: double.infinity,
-                  height: 125,
+                  height: getProportionateScreenHeight(90),
                 ),
               ),
               const SizedBox(height: 4),
               Container(
                 width: double.infinity,
-                padding: const EdgeInsets.all(4),
+                padding: const EdgeInsets.all(3),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      place.name,
-                      style: const TextStyle(
-                        fontSize: 16.0,
-                        fontWeight: FontWeight.bold,
+                    FittedBox(
+                      fit: BoxFit.scaleDown,
+                      child: Text(
+                        place.name,
+                        style: TextStyle(
+                          fontSize: getProportionateScreenWidth(16),
+                          fontWeight: FontWeight.bold,
+                        ),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -53,14 +60,22 @@ class TourismCard extends StatelessWidget {
                             const Icon(Icons.location_on,
                                 size: 16, color: Colors.grey),
                             const SizedBox(width: 4),
-                            Text(place.location,
-                                style: const TextStyle(fontSize: 12)),
+                            FittedBox(
+                              fit: BoxFit.scaleDown,
+                              child: Text(
+                                place.location,
+                                style: TextStyle(
+                                  fontSize: getProportionateScreenWidth(10),
+                                ),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
                           ],
                         ),
                         const SizedBox(height: 4),
                         Container(
                           padding: const EdgeInsets.symmetric(
-                              vertical: 4, horizontal: 8),
+                              vertical: 4, horizontal: 4),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: bgDarkColor,
@@ -70,8 +85,17 @@ class TourismCard extends StatelessWidget {
                               const Icon(Icons.star,
                                   size: 16, color: Colors.yellow),
                               const SizedBox(width: 4),
-                              Text(place.rating,
-                                  style: const TextStyle(color: bgLightColor)),
+                              FittedBox(
+                                fit: BoxFit.scaleDown,
+                                child: Text(
+                                  place.rating,
+                                  style: TextStyle(
+                                    color: bgLightColor,
+                                    fontSize: getProportionateScreenWidth(10),
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
                             ],
                           ),
                         ),
