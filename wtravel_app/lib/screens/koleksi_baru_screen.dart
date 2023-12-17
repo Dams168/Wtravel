@@ -33,7 +33,7 @@ class _MyWidgetState extends State<BuatKoleksiBaru> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              margin: const EdgeInsets.only(right: 10.0),
+              margin: const EdgeInsets.only(right: 5.0),
               child: Image.asset(
                 'assets/icons/perjalanan-koleksi-blue.png',
               ),
@@ -42,7 +42,7 @@ class _MyWidgetState extends State<BuatKoleksiBaru> {
               'Buat Koleksi Baru',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 22.0,
+                fontSize: 16.0,
                 color: Color(0xFF140C47),
               ),
             ),
@@ -151,7 +151,7 @@ class _MyWidgetState extends State<BuatKoleksiBaru> {
                 ),
               ],
             ),
-            const SizedBox(height: 195),
+            const SizedBox(height: 150),
             Row(
               children: [
                 Expanded(

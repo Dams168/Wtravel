@@ -11,7 +11,7 @@ class EditProfileScreen extends StatelessWidget {
         title: const Text('Edit Profile'),
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(12.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
@@ -22,44 +22,44 @@ class EditProfileScreen extends StatelessWidget {
                 backgroundImage: AssetImage('assets/images/profile.jpg'),
               ),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 12.0),
             const EditProfileCard(
               title: 'Nama',
               content: Text(
                 'Qianziano Qylan Aldebaran',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 8.0),
               ),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 12.0),
             const EditProfileCard(
               title: 'Jenis Kelamin',
               content: Text(
                 'Laki-Laki',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 12.0),
               ),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 12.0),
             const EditProfileCard(
               title: 'Telepon',
               content: Text(
                 '+62 857-1234-5678',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 12.0),
               ),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 12.0),
             const EditProfileCard(
               title: 'Email',
               content: Text(
                 'qylan@gmail.com',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 12.0),
               ),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 12.0),
             const EditProfileCard(
               title: 'Alamat',
               content: Text(
                 'Jakarta',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(fontSize: 12.0),
               ),
             ),
             const SizedBox(height: 24.0),
@@ -71,7 +71,7 @@ class EditProfileScreen extends StatelessWidget {
                   fontSize: 18.0,
                   color: Colors.white, // Set text color to white
                 ),
-                padding: const EdgeInsets.symmetric(vertical: 16.0),
+                padding: const EdgeInsets.symmetric(vertical: 12.0),
               ),
               child: const Text('Simpan'),
             ),
@@ -100,7 +100,7 @@ class EditProfileCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(10.0),
       ),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(12.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [

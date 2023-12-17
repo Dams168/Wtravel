@@ -5,6 +5,7 @@ import 'package:wtravel_app/screens/article_list_screen.dart';
 import 'package:wtravel_app/screens/detail_article_screen.dart';
 import 'package:wtravel_app/screens/detail_place_screen.dart';
 import 'package:wtravel_app/screens/tourism_place_list_screen.dart';
+import 'package:wtravel_app/size_config.dart';
 import 'package:wtravel_app/widgets/article_card.dart';
 import 'package:wtravel_app/widgets/button_navbar.dart';
 import 'package:wtravel_app/widgets/category_card.dart';
@@ -47,32 +48,41 @@ class DashboardScreen extends StatelessWidget {
           children: [
             Container(
               padding: const EdgeInsets.all(16.0),
-              child: const Row(
+              child: Row(
                 children: [
-                  CircleAvatar(
-                    radius: 30,
-                    backgroundImage: AssetImage('assets/images/profile.jpg'),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(30),
+                    child: const FittedBox(
+                      child: CircleAvatar(
+                        radius: 30,
+                        backgroundImage:
+                            AssetImage('assets/images/profile.jpg'),
+                      ),
+                    ),
                   ),
-                  SizedBox(width: 16),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Qianziano Qylan Aldebaran',
-                        style: TextStyle(
-                          fontSize: 18.0,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black,
+                  const SizedBox(width: 16),
+                  const Flexible(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Qianziano Qylan Aldebaran',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                          overflow: TextOverflow.ellipsis,
                         ),
-                      ),
-                      Text(
-                        'Welcome back!',
-                        style: TextStyle(
-                          fontSize: 14.0,
-                          color: Colors.grey,
+                        Text(
+                          'Welcome back!',
+                          style: TextStyle(
+                            fontSize: 14.0,
+                            color: Colors.grey,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -123,18 +133,25 @@ class TourismPlaceList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    double screenWidth = SizeConfig.screenWidth;
+
+    double cardWidth = screenWidth < 600
+        ? SizeConfig.screenWidth * 0.5
+        : SizeConfig.screenWidth * 0.4;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.all(16.0),
+          padding: EdgeInsets.all(getProportionateScreenWidth(16)),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Text(
+              Text(
                 'Destinasi Populer',
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: getProportionateScreenWidth(16),
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -145,43 +162,48 @@ class TourismPlaceList extends StatelessWidget {
                     MaterialPageRoute(
                       builder: (context) {
                         return AllTourismPlacesScreen(
-                            allTourismPlaces: tourismPlaces);
+                          allTourismPlaces: tourismPlaces,
+                        );
                       },
                     ),
                   );
                 },
-                child: const Text(
+                child: Text(
                   'Lihat Semua',
                   style: TextStyle(
                     color: Colors.blue,
-                    fontSize: 16.0,
+                    fontSize: getProportionateScreenWidth(16),
                   ),
                 ),
               ),
             ],
           ),
         ),
-        SizedBox(
-          height: 250,
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              children: tourismPlaces.take(5).map((place) {
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            children: List.generate(
+              5,
+              (index) {
                 return SizedBox(
-                  width: 200,
+                  width: cardWidth,
                   child: TourismCard(
-                    place: place,
+                    place: tourismPlaces[index],
                     onTap: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) {
-                          return DetailPlaceScreen(place: place);
-                        }),
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return DetailPlaceScreen(
+                              place: tourismPlaces[index],
+                            );
+                          },
+                        ),
                       );
                     },
                   ),
                 );
-              }).toList(),
+              },
             ),
           ),
         ),
